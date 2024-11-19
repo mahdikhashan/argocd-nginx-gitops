@@ -1,0 +1,1 @@
+1. setup a kubernetes environment, namespace
