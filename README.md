@@ -13,11 +13,15 @@ brew install kubectl k3d
 **Start Local ArgoCD**
 
 ```bash
-    make start-local-argo
+make start-local-argo
 ```
 
 **Stop Local ArgoCD**
 
 ```bash
-    make stop-local-argocd
+make stop-local-argocd
 ```
+
+---
+
+LICENSE GNU General Public License v3.0 
