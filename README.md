@@ -1,6 +1,4 @@
-# ArgoCD GitOps with K3d 
-
----
+# ArgoCD GitOps with K3d
 
 ### Install kubectl and k3d on local machine
 
