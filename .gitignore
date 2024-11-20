@@ -1,6 +1,7 @@
 .idea
 argocd-simple-GitOps.iml
 
-port-forward.log
+*.log
+argo-cd-pid.txt
 
 ./tmp
