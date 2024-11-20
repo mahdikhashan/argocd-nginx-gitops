@@ -2,3 +2,5 @@
 argocd-simple-GitOps.iml
 
 port-forward.log
+
+./tmp

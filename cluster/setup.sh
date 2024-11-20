@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-source ../.env
-
-function create_cluster()
+create_cluster()
 {
   if k3d cluster list | grep -q $1; then
     echo "cluster with name '$1' already exists."
@@ -12,14 +10,9 @@ function create_cluster()
   fi
 }
 
-function drop_cluster()
+drop_cluster()
 {
-  # TODO
-  echo "drop"
+  if k3d cluster list | grep -q $1; then
+    k3d cluster delete $1
+  fi
 }
-
-create_cluster $CLUSTER_NAME
-
-if kubectl config use-context "k3d-$CLUSTER_NAME" &>/dev/null && kubectl config current-context | grep -q "k3d-$CLUSTER_NAME"; then
-  echo "switched to cluster '$CLUSTER_NAME'."
-fi
