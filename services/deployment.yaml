@@ -20,5 +20,5 @@ spec:
           image: nginx:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8070
+            - containerPort: 80
       restartPolicy: Always
