@@ -20,6 +20,6 @@ spec:
           image: nginx:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 8070
               protocol: TCP
       restartPolicy: Always
