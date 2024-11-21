@@ -39,13 +39,20 @@ start-local-argo: start-local
 stop-local-argocd:
 	@pgrep -f "kubectl port-forward" | xargs kill -9
 
+.PHONY: show-argocd-password
+.show-argocd-password:
+	. argocd.sh && ui_admin_password ${NAMESPACE}
+
 .PHONY: help
 help:
 	@echo 'Note: TODO'
 	@echo
 	@echo 'help: this help comments'
 	@echo
-	@echo 'run:'
-	@echo '	 run				-- run eveything from start'
+	@echo 'debug:'
+	@echo '	 debug					-- echo current directory and the shell being used'
 	@echo
 	@echo 'clean:'
+	@echo '  clean-debug:			-- remove all the logs and other txt temporary file'
+	@echo '  clean:					-- remove cluster, namespace and all others here'
+
